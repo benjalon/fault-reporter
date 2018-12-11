@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="css/supernice.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Home screen</title>
+</head>
+
+<body style="background-color:gray;">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-12" style="background-color:red;">
+      <br>Greater Anglia <br>
+    </div>
+    <div class="col-md-12">
+      <h1 style="color:white">Report Fault</h1>
+      <form>
+        <div class="form-group">
+          <label for="title" style="color:white">Title</label>
+          <input type="text"  class="form-control input-lg" name="title" id="title" placeholder="Broken window">
+        </div>
+        <div class="form-group">
+          <label for="description" style="color:white">Description</label>
+          <input type="text"  class="form-control input-lg" name="description" id="description" placeholder="Description of fault...">
+        </div>
+        <div class="form-group">
+          <label for="startTime" style="color:white;width:100%;">What time did you get on?</label>
+          <input type="text"  class="form-control input-lg" name="startTime" id="startTime" placeholder="14:00">
+        </div>
+        <div class="form-group">
+          <label for="startLoc" style="color:white">Where did you get on?</label>
+          <input type="text"  class="form-control input-lg" name="startLoc" id="startLoc" placeholder="Norwich">
+        </div>
+        <div class="form-group">
+          <label for="trainPart" style="color:white">What part of the train?</label>
+          <input type="text"  class="form-control input-lg" name="trainPart" id="trainPart" placeholder="Back - Middle - Front">
+        </div>
+        <button type="button" class="btn btn-sm btn-primary">Advanced</button>
+        <!--
+        <div class="form-group">
+          <label for="carLetter" style="color:white">Carriage Letter</label>
+          <input type="text"  class="form-control input-lg" name="carLetter" id="carLetter" placeholder="e.g. G">
+        </div>
+        <div class="form-group">
+          <label for="carNo" style="color:white">Carriage </label>
+          <input type="text" class="form-control input-lg"  name="carNo" id="carNo" placeholder="e.g. 100124405">
+        </div>-->
+      </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
