@@ -11,21 +11,66 @@
     <link rel="stylesheet" type="text/css" href="css/supernice.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <title>Home screen</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 
-<body >
+<body style="background-color:#cfc8c6">
   <div class="container">
     <div class="row">
-      <div class="col-md-12" style="background-color:red;">
-        <br>Greater Anglia <br>
+      <div class="col-md-12" style="background-color:#ebebde;">
+        <br>
+        <a class="btn btn-primary" href="index.html" role="button"><</a>
+        <img src="/img/logo.png" alt="Greater Anglia" >
+        <br>
       </div>
       <div class="col-md-12">
         <h1>Past faults</h1>
-        <br>
-        <div class="well"><br>Horrible<br></div>
+        <div id="accordion">
+          <div class="card">
+            <a class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <div class="card-header" id="headingOne">
+              <h5>Broken window <span class="badge badge-success">Resolved</span></h5>
+            </div>
+            </a>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+              </div>
+            </div>
+          </div><br>
+
+          <div class="card">
+            <a class="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <div class="card-header" id="headingOne">
+              <h5>Sticky table <span class="badge badge-danger">Waiting</span></h5>
+            </div>
+            </a>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+              </div>
+            </div>
+          </div><br>
+
+          <div class="card">
+            <a class="" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <div class="card-header" id="headingOne">
+              <h5>Wearing carpet <span class="badge badge-warning">Pending</span></h5>
+
+            </div>
+            </a>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+                <p>Reported: 10/11/2019</p>
+                <p>Descriprion: There is something wrong.</p>
+                <p>Status: Pending</p>
+              </div>
+            </div>
+          </div><br>
+        </div>
+      </div>
       </div>
     </div>
-  </div>
 
 </body>
 
