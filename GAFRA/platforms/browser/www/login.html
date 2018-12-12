@@ -22,11 +22,28 @@
         <img src="img/logo.png" alt="Greater Anglia" class="mx-auto img-fluid" height="auto" width="auto" style="padding:15px">
       </div>
       <div class="col-md-12">
+        <form id="reportFaultForm">
+          <div class="form-group">
+            <label for="username" style="color:white">Username</label>
+            <input type="text"  class="form-control input-lg" name="username" id="username">
+          </div>
+          <div class="form-group">
+            <label for="password" style="color:white">Password</label>
+            <textarea class="form-control input-lg" name="description" id="description" placeholder="Description of fault..." rows="3"></textarea>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="toHome">Log in</button>
+        </form>
+
 
       </div>
       </div>
     </div>
 
 </body>
+<script>
+function toHome(){
+  window.location.href = "home.html";
+}
+</script>
 
 </html>
