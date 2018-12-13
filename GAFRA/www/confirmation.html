@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
   <meta name="format-detection" content="telephone=no" />
@@ -21,30 +22,35 @@
       <div class="col-md-12" style="background-color:#ebebde;">
         <img src="img/logo.png" alt="Greater Anglia" class="mx-auto img-fluid" height="auto" width="auto" style="padding:15px">
       </div>
-    <div class="col-md-12">
-      <a class="btn btn-primary" href="index.html" role="button" style="margin-top:15px; margin-bottom:15px">Back</a>
-      <br>
-      <div class="card">
-        <div class="card-header" id="title"></div>
-        <div class="card-body">
-          <p>Date submitted: <span  id="date"></span></p>
-          <p>Description: <span  id="description"></span></p>
-          <p><span  id=""></span></p>
+      <div class="col-md-12">
+        <a class="btn btn-primary" href="index.html" role="button" style="margin-top:15px; margin-bottom:15px">Back</a>
+        <br>
+        <div class="card">
+          <div class="card-header" id="title"></div>
+          <div class="card-body">
+            <p>Date submitted: <span id="date"></span></p>
+            <p>Description: <span id="description"></span></p>
+            <p><span id=""></span></p>
+          </div>
+          <div class="card-footer">
+            <p>Status: Pending</p>
+          </div>
         </div>
-        <div class="card-footer"><p>Status: Pending</p></div>
-      </div>
 
-  </div></div>
+      </div>
+    </div>
 
 </body>
 <script>
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-  console.log(navigator.camera);
-}
-//document.getElementById("title").innerHTML = localStorage.getItem("lastname");
-$('#title').html(localStorage.getItem("title"));
-$('#description').html(localStorage.getItem("description"));
-$('#date').html(localStorage.getItem("date"));
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+  function onDeviceReady() {
+    console.log(navigator.camera);
+  }
+  //document.getElementById("title").innerHTML = localStorage.getItem("lastname");
+  $('#title').html(localStorage.getItem("title"));
+  $('#description').html(localStorage.getItem("description"));
+  $('#date').html(localStorage.getItem("date"));
 </script>
+
 </html>

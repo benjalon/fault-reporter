@@ -21,110 +21,96 @@
       <div class="col-md-12" style="background-color:#ebebde;">
         <img src="img/logo.png" alt="Greater Anglia" class="mx-auto img-fluid" height="auto" width="auto" style="padding:15px">
       </div>
-    <div class="col-md-12">
-      <a class="btn btn-primary" href="home.html" role="button" style="margin-top:15px; margin-bottom:15px">Back</a>
-      <br>
-      <h1 style="color:white">Report Fault</h1>
-      <div id="result"></div>
-      <form id="reportFaultForm">
-        <div class="form-group">
-          <label for="title" style="color:white">Title</label>
-          <input type="text"  class="form-control input-lg" name="title" id="title" placeholder="Broken window">
-        </div>
-        <div class="form-group">
-          <label for="description" style="color:white">Description</label>
-          <textarea class="form-control input-lg" name="description" id="description" placeholder="Description of fault..." rows="3"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="startTime" style="color:white;width:100%;">What time did you get on?</label>
-          <input type="time"  class="form-control input-lg" name="startTime" id="startTime" placeholder="14:00">
-        </div>
-        <div class="form-group">
-          <label for="startLoc" style="color:white">Where did you get on?</label>
-          <select class="form-control" name="startLoc">
-            <option>Norwich</option>
-            <option>Diss</option>
-            <option>London Liverpool St</option>
-            <option>Ipswitch</option>
-            <option>Colchester</option>
-            <option>Ely</option>
-            <option>Manningtree</option>
-            <option>Sheringham</option>
-            <option>Stratford (London)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="startLoc" style="color:white">Where did you get on?</label>
-          <select class="form-control" name="startLoc">
-            <option>Norwich</option>
-            <option>Diss</option>
-            <option>London Liverpool St</option>
-            <option>Ipswitch</option>
-            <option>Colchester</option>
-            <option>Ely</option>
-            <option>Manningtree</option>
-            <option>Sheringham</option>
-            <option>Stratford (London)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="trainPart" style="color:white">What part of the train?</label><br>
-          <div class="btn-group btn-group-toggle" data-toggle="buttons" name="trainPart">
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option1" autocomplete="off" checked> Back
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option2" autocomplete="off"> Middle
-            </label>
-            <label class="btn btn-secondary">
-              <input type="radio" name="options" id="option3" autocomplete="off"> Front
-            </label>
+      <div class="col-md-12">
+        <a class="btn btn-primary" href="home.html" role="button" style="margin-top:15px; margin-bottom:15px">Back</a>
+        <br>
+        <h1>Report Fault</h1>
+        <div id="result"></div>
+        <form id="reportFaultForm">
+          <div class="form-group">
+            <label for="title"  >Title</label>
+            <input type="text" class="form-control input-lg" name="title" id="title" placeholder="Broken window">
           </div>
-        </div>
+          <div class="form-group">
+            <label for="description"  >Description</label>
+            <textarea class="form-control input-lg" name="description" id="description" placeholder="Description of fault..." rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="description"  >Where exactly in the station?</label>
+            <textarea class="form-control input-lg" name="description" id="description" placeholder="Description of fault..." rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="startLoc"  >What station are you at?</label>
+            <select class="form-control" name="startLoc">
+              <option>Norwich</option>
+              <option>Diss</option>
+              <option>London Liverpool St</option>
+              <option>Ipswitch</option>
+              <option>Colchester</option>
+              <option>Ely</option>
+              <option>Manningtree</option>
+              <option>Sheringham</option>
+              <option>Stratford (London)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="trainPart"  >What part of the train?</label><br>
+            <div class="btn-group btn-group-toggle" data-toggle="buttons" name="trainPart">
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Back
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Middle
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="options" id="option3" autocomplete="off"> Front
+              </label>
+            </div>
+          </div>
 
-        <button type="button" class="btn btn-sm btn-primary" onclick="advanced()">Advanced</button><br><br>
-        <div id="advanced" style="display:none">
-        <div class="form-group">
-          <label for="carLetter" style="color:white">Carriage Letter</label>
-          <input type="text"  class="form-control input-lg" name="carLetter" id="carLetter" placeholder="e.g. G">
-        </div>
-        <div class="form-group">
-          <label for="carNo" style="color:white">Carriage </label>
-          <input type="text" class="form-control input-lg"  name="carNo" id="carNo" placeholder="e.g. 100124405">
-        </div>
-        </div>
-        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="saveToLocal()">Submit</button>
-      </form>
+          <button type="button" class="btn btn-sm btn-primary" onclick="advanced()">Advanced</button><br><br>
+          <div id="advanced" style="display:none">
+            <div class="form-group">
+              <label for="carLetter"  >Carriage Letter</label>
+              <input type="text" class="form-control input-lg" name="carLetter" id="carLetter" placeholder="e.g. G">
+            </div>
+            <div class="form-group">
+              <label for="carNo"  >Carriage </label>
+              <input type="text" class="form-control input-lg" name="carNo" id="carNo" placeholder="e.g. 100124405">
+            </div>
+          </div>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="saveToLocal()">Submit</button>
+        </form>
 
+      </div>
     </div>
-  </div>
 
 </body>
 <script>
-function saveToLocal(){
-  //get all elements of the form
-  $("form#reportFaultForm :input").each(function(){
-   localStorage.setItem(this.id, this.value);
-});
-var dt = new Date();
-date = (dt.getDay() +"/"+dt.getMonth()+"/" + dt.getFullYear());
-localStorage.setItem("date", date);
-window.location.href = "confirmation.html";
-}
-function advanced(){
-  $('#advanced').slideToggle();
-}
-$(document).ready(function(){
-  var dt = new Date();
-  if(dt.getMinutes() < 10 ){
-    min = "0" + dt.getMinutes();
-  }else {
-    min = dt.getMinutes();
+  function saveToLocal() {
+    //get all elements of the form
+    $("form#reportFaultForm :input").each(function() {
+      localStorage.setItem(this.id, this.value);
+    });
+    var dt = new Date();
+    date = (dt.getDay() + "/" + dt.getMonth() + "/" + dt.getFullYear());
+    localStorage.setItem("date", date);
+    window.location.href = "confirmation.html";
   }
-  var time = dt.getHours() + ":" + min;
-  $('#startTime').val(time);
-});
 
+  function advanced() {
+    $('#advanced').slideToggle();
+  }
+  $(document).ready(function() {
+    var dt = new Date();
+    if (dt.getMinutes() < 10) {
+      min = "0" + dt.getMinutes();
+    } else {
+      min = dt.getMinutes();
+    }
+    var time = dt.getHours() + ":" + min;
+    $('#startTime').val(time);
+  });
 </script>
 
 </html>

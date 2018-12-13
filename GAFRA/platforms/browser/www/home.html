@@ -23,24 +23,30 @@
         <img src="img/logo.png" alt="Greater Anglia" class="mx-auto img-fluid" height="auto" width="auto" style="padding:15px">
         <br>
       </div>
-    <div class="col-md-12" id="title">
-      <br>
-      <h1>Welcome back Ben... 6:17:39</h1>
-      <div class="align-items-center h-100">
-        <a href="report.html" class="btn btn-primary btn-lg btn-block" role="button">Train</a><br><br>
-        <a href="reportStation.html" class="btn btn-primary btn-lg btn-block" role="button">Station</a><br><br>
-        <a href="past.html" class="btn btn-primary btn-lg btn-block" role="button">View past faults</a>
+      <div class="col-md-12" id="title">
+        <br>
+        <h1 style="text-align: center;">Welcome back Ben...</h1>
+        <hr>
+        <h3>Click to report a fault, or view past faults</h3>
+        <div><br><br>
+          <a href="report.html" class="btn btn-primary btn-lg btn-block" role="button">Train <span><img src="img/train.png" alt="Greater Anglia" class="mx-auto img-fluid" height="35em" width="35em"></span></a><br><br>
+          <a href="reportStation.html" class="btn btn-primary btn-lg btn-block" role="button">Station <span><img src="img/station.png" alt="Greater Anglia" class="mx-auto img-fluid" height="35em" width="35em"></span></a><br>
+          <hr>
+          <a href="past.html" class="btn btn-primary btn-lg btn-block" role="button">View past faults</a>
+        </div>
+
       </div>
 
     </div>
-
-  </div></div>
+  </div>
 
 </body>
 <script>
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-  console.log(navigator.camera);
-}
+  document.addEventListener("deviceready", onDeviceReady, false);
+
+  function onDeviceReady() {
+    console.log(navigator.camera);
+  }
 </script>
+
 </html>
