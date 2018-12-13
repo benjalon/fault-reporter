@@ -22,9 +22,20 @@
         <img src="img/logo.png" alt="Greater Anglia" class="mx-auto img-fluid" height="auto" width="auto" style="padding:15px">
       </div>
       <div class="col-md-12">
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document" style="margin-top:60%">
+            <div class="modal-content">
+              <div class="modal-body justify-content-center">
+                <h3 style="text-align: center;">Submitted!</h3>
+                <span style="text-align: center;"><img src="img/tick.png" alt="Greater Anglia" class="center mx-auto img-fluid" height="125em" width="125em" ></span>
+                <h4 style="text-align: center;">Thanks for your help!</h4>
+              </div>
+            </div>
+          </div>
+        </div>
         <a class="btn btn-primary" href="home.html" role="button" style="margin-top:15px; margin-bottom:15px">Back</a>
         <br>
-        <h1>Report Fault</h1>
+        <h1 style="text-align: center;">Report Fault</h1>
         <div id="result"></div>
         <form id="reportFaultForm">
           <div class="form-group">
@@ -37,7 +48,7 @@
           </div>
           <div class="form-group">
             <label for="description"  >Where exactly in the station?</label>
-            <textarea class="form-control input-lg" name="description" id="description" placeholder="Description of fault..." rows="3"></textarea>
+            <textarea class="form-control input-lg" name="description" id="description" placeholder="Beside platform 12..." rows="3"></textarea>
           </div>
           <div class="form-group">
             <label for="startLoc"  >What station are you at?</label>
@@ -53,33 +64,9 @@
               <option>Stratford (London)</option>
             </select>
           </div>
-          <div class="form-group">
-            <label for="trainPart"  >What part of the train?</label><br>
-            <div class="btn-group btn-group-toggle" data-toggle="buttons" name="trainPart">
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Back
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> Middle
-              </label>
-              <label class="btn btn-secondary">
-                <input type="radio" name="options" id="option3" autocomplete="off"> Front
-              </label>
-            </div>
-          </div>
-
-          <button type="button" class="btn btn-sm btn-primary" onclick="advanced()">Advanced</button><br><br>
-          <div id="advanced" style="display:none">
-            <div class="form-group">
-              <label for="carLetter"  >Carriage Letter</label>
-              <input type="text" class="form-control input-lg" name="carLetter" id="carLetter" placeholder="e.g. G">
-            </div>
-            <div class="form-group">
-              <label for="carNo"  >Carriage </label>
-              <input type="text" class="form-control input-lg" name="carNo" id="carNo" placeholder="e.g. 100124405">
-            </div>
-          </div>
-          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="saveToLocal()">Submit</button>
+          <button type="button" class="btn btn-primary float-right"><img src="img/camera.png" alt="Camera icon" class="mx-auto img-fluid" height="15em" width="15em"></button>
+          <br><br>
+          <button type="button" class="btn btn-primary btn-lg btn-block" onclick="saveToLocal()" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
         </form>
 
       </div>
@@ -95,8 +82,10 @@
     var dt = new Date();
     date = (dt.getDay() + "/" + dt.getMonth() + "/" + dt.getFullYear());
     localStorage.setItem("date", date);
-    window.location.href = "confirmation.html";
-  }
+    window.setTimeout(function() {
+    window.location.href = "home.html";
+  }, 1500);
+}
 
   function advanced() {
     $('#advanced').slideToggle();
