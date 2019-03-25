@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+
+  <link rel="stylesheet" type="text/css" href="css/supernice.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <title>Help</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background-color:#cfc8c6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" style="background-color:#ebebde;">
+        <img src="img/logo.png" alt="Greater Anglia" class="mx-auto img-fluid" height="auto" width="auto" style="padding:15px">
+      </div>
+      <div class="col-md-12">
+        <a class="btn btn-primary" href="login.html" role="button" style="margin-top:15px; margin-bottom:15px">Back</a>
+        <br>
+        <div class="alert alert-primary" role="alert" style="display:none" id="alert">
+          Thanks for signing up! Check your email for a confirmation link!
+        </div>
+        <div class="form-group">
+          <label for="name" >Name: </label>
+          <input type="name" class="form-control input-lg" name="name" id="name"><br>
+        </div>
+        <div class="form-group">
+          <label for="email" >Email address: </label>
+          <input type="email" class="form-control input-lg" name="email" id="email"><br>
+        </div>
+        <div class="form-group">
+          <label for="id" >Worker ID: </label>
+          <input type="id" class="form-control input-lg" name="id" id="id"><br>
+        </div>
+        <div class="form-group">
+          <label for="pass" >Password: </label>
+          <input type="pass" class="form-control input-lg" name="pass" id="pass"><br>
+        </div>
+        <div class="form-group">
+          <label for="confPass" >Confirm password: </label>
+          <input type="confPass" class="form-control input-lg" name="confPass" id="confPass"><br>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg btn-block" onclick="reset()">sIgn up</button>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+<script>
+  function reset() {
+    $('#alert').slideDown();
+  }
+</script>
+
+</html>
